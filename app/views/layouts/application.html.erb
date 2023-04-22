@@ -12,14 +12,25 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <%= link_to "Here comes the LOGO", root_path, class: "navbar-brand" %>
-        <ul class="nav navbar-nav">
-          <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
+      <a class="navbar-brand" href="#">Testing-Rails</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About", about_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
         </ul>
       </div>
     </nav>
+
     <%= yield %>
   </body>
 </html>
