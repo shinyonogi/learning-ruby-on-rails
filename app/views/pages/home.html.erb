@@ -1,7 +1,8 @@
-<h1 class="title">Hallihallo!<br>It's me testing rails :)</h1>
 <% if user_signed_in? %>
+    <h1 class="title">You're signed in!<br>My friend :)</h1>
     <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-lg start-btn button-text" %>
 <% else %>
+    <h1 class="title">Hallihallo!<br>It's me testing rails :)</h1>
     <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg button-text start-btn" %>
     <p class="login-text">Or <%= link_to "Login", new_user_session_path %> if you already have an account.</p>
 <% end %>
